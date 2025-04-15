@@ -1,0 +1,15 @@
+.Tickets {
+    min-height: 836px;
+    width: 727px;
+}
+
+@media screen and (max-width: 768px){
+    .Tickets {
+        width: 695px;
+    }
+}
+@media screen and (max-width: 430px){
+    .Tickets {
+        width: 400px;
+    }
+}

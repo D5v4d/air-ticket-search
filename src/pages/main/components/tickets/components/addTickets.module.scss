@@ -1,0 +1,13 @@
+@use "../../../../../scss/mixin.scss" as *;
+
+
+.AddTickets{
+    height: 62px;
+    background-color: $background-purple;
+    border-radius: $border-radius;
+    text-align: center;
+    line-height: 60px;
+    font-weight: $font-weight-bold;
+    cursor: $cursor-pointer;
+    @include text(24px, white);
+}

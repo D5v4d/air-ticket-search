@@ -1,0 +1,39 @@
+@use "../../../../../scss/mixin.scss" as *;
+
+.NumberOfTransfers {
+    @include filter;
+    @include block(239px);
+
+    li {
+        /* Добавление галочки */
+        input:checked+.customCheckbox::after {
+            @include checkedBox('/src/assets/svg/check-mark.svg', 2px)
+        }
+        .customCheckbox {
+            @include customCheckbox(4px, $text-purple);
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .NumberOfTransfers{
+        background: none;
+        color: white;
+        padding-top: 0px;
+        padding-left: 24px;
+        margin-top: 10px;
+
+        li{
+            color: white;
+            padding-left: 43px;
+            input:checked+.customCheckbox::after {
+                @include checkedBox('/src/assets/svg/check-mark.svg', 2px)
+            }
+            .customCheckbox {
+                @include customCheckbox(4px, white);
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.TicketList{
+    display: flex;
+    flex-direction: column;
+    row-gap: 47px;
+    min-height: 616px;
+    margin-top: 29px;
+    margin-bottom: 74px;
+}
+.ApiLoading{
+    margin: 0 auto;
+    margin-top: 309px;
+}
+
+@media screen and (max-width: 430px) {
+    .TicketList{
+        min-height: 592px;
+        margin-top: 25px;
+        margin-bottom: 53px;
+    }
+
+}

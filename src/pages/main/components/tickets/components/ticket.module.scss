@@ -1,0 +1,100 @@
+@use "../../../../../scss/mixin.scss" as *;
+
+
+.Ticket {
+    @include block(117px);
+    padding: 32px 43px 25px 39px;
+    grid-template-columns: 1fr 1fr 200px;
+    display: grid;
+    grid-template-areas:
+        "price . logo"
+        "fromTo ways transfers"
+        "time durations connectionAmount";
+    justify-content: space-between;
+
+    .Price {
+        grid-area: price;
+        @include text(32px, $text-purple);
+        font-weight: $font-weight-bold;
+        padding-top: 6px;
+        margin-right: 10px;
+        margin-bottom: 26px;
+    }
+
+    .Logo {
+        grid-area: logo;
+        justify-self: end;
+    }
+
+    .FromTo {
+        grid-area: fromTo;
+    }
+
+    .Ways {
+        grid-area: ways;
+    }
+
+    .Тransfers {
+        grid-area: transfers;
+    }
+
+    .Time {
+        grid-area: time;
+    }
+
+    .Durations {
+        grid-area: durations;
+    }
+
+    .ConnectionAmount {
+        grid-area: connectionAmount;
+    }
+
+    .Тransfers,
+    .ConnectionAmount,
+    .Ways,
+    .Durations {
+        padding-left: 50px;
+    }
+
+    .Тransfers,
+    .Ways,
+    .FromTo {
+        color: $text-lavander;
+        padding-bottom: 9px;
+    }
+
+    .ConnectionAmount,
+    .Durations,
+    .Time {
+        color: $text-purple;
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+    .Ticket {
+        padding: 40px 28px 25px 23px;
+        grid-template-columns: 1fr 85px 118px;
+
+        .Price {
+            padding-top: 0px;
+            margin-right: 0px;
+        }
+
+        .Logo {
+            width: 118px;
+        }
+
+        .Ways,
+        .Durations {
+            padding-left: 0px;
+            margin-left: -20px; 
+        }
+
+        .Тransfers,
+        .ConnectionAmount {
+            padding-left: 18px;
+        }
+    }
+}

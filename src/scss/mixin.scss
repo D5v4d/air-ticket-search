@@ -1,0 +1,64 @@
+$text-purple: rgb(78, 20, 140);
+$text-lavander: rgb(133, 138, 227);
+$background-light-lavander: rgb(232, 235, 242);
+$background-purple: rgb(78, 20, 140);
+$font-weight-bold: bold;
+$border-radius: 10px;
+$cursor-pointer: pointer;
+
+
+@mixin block($height) {
+    height: $height;
+    background-color: $background-light-lavander;
+    border-radius: $border-radius;
+}
+
+@mixin text($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+@mixin filter() {
+    display: flex;
+    flex-direction: column;
+    row-gap: 21px;
+    @include text(20px, $text-purple);
+    margin: 0;
+    padding-top: 19px;
+    padding-left: 19px;
+    font-weight: $font-weight-bold;
+
+    li {
+        @include text(16px, $text-lavander);
+        list-style: none;
+        padding-left: 63px;
+        font-weight: 500;
+
+        input {
+            display: none;
+        }
+
+        span {
+            cursor: $cursor-pointer;
+        }
+    }
+}
+
+@mixin customCheckbox($border-radius, $color) {
+    margin-left: -43px;
+    margin-top: 0px;
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    border: 1px solid $color;
+    border-radius: $border-radius;
+    cursor: $cursor-pointer;
+}
+
+@mixin checkedBox($src, $top) {
+    content: url($src);
+    display: block;
+    text-align: center;
+    color: white;
+    padding-top: $top;
+}
