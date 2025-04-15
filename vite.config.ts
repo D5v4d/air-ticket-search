@@ -1,8 +1,11 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
+
 export default defineConfig({
   plugins: [react()],
-})
- 
+  base: '/air-ticket-search/', // Укажите имя вашего репозитория
+  build: {
+    outDir: 'dist', // Убедитесь, что это правильная директория сборки
+  },
+});
