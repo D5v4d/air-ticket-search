@@ -12,7 +12,7 @@ const TicketList = () => {
 
   const [percent, setPercent] = useState(-50);
   const timerRef = useRef<ReturnType<typeof setTimeout>>(null);
-  const apiСompleted = useSelector((state: RootState) => (state.tickets.Api));
+  const apiСompleted = useSelector((state: RootState) => (state.tickets.apiLoaded));
 
   useEffect(() => {
     timerRef.current = setTimeout(() => {
